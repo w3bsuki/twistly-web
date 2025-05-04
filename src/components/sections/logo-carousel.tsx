@@ -69,13 +69,13 @@ export function LogoCarousel() {
 
   return (
     <section className="bg-background py-16 md:py-24">
-      <div className="container">
-        <div className="flex w-fit items-center justify-center gap-4 rounded-full bg-muted px-4 py-2 tracking-tight transition-all ease-in-out hover:gap-6 mb-6">
+      <div className="container mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="flex w-fit mx-auto items-center justify-center gap-4 rounded-full bg-muted px-4 py-2 tracking-tight transition-all ease-in-out hover:gap-6 mb-6">
           <span className="inline-block size-3 rounded-full bg-foreground" />
           <p className="text-foreground">Trusted by top companies</p>
         </div>
         
-        <h2 className="max-w-4xl text-3xl font-medium tracking-tighter text-foreground md:text-4xl mb-12">
+        <h2 className="max-w-4xl mx-auto text-center text-3xl font-medium tracking-tighter text-foreground md:text-4xl mb-12">
           Discover how our tools have unlocked new{" "}
           <span className="text-muted-foreground/70">
             levels of creativity{" "}
@@ -83,10 +83,11 @@ export function LogoCarousel() {
           and efficiency
         </h2>
 
-        <div className="relative mx-auto flex items-center justify-center">
+        <div className="relative w-full overflow-hidden">
           <Carousel
-            opts={{ loop: true, align: "start" }}
+            opts={{ loop: true, align: "center" }}
             plugins={[AutoScroll({ playOnInit: true, speed: 0.8 })]}
+            className="w-full"
           >
             <CarouselContent className="ml-0">
               {logos.map((logo, index) => (
